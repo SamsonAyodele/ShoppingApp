@@ -8,6 +8,14 @@
         <link rel="icon" href="./asset/icon-192.png">
         <link rel="stylesheet" href="./style.css">
         <script src="./dexie.min.js"></script>
+
+        <script >
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./sw.js');
+                });
+            }
+        </script>
     </head>
     <body>
         <nav>My List</nav>
